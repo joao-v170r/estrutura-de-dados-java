@@ -29,7 +29,6 @@ public class BubbleSort {
 		Scanner leitorTeclado = new Scanner(System.in);
 		
 		int[] arrayInteiros = new int[5];
-		Boolean ocorreuTroca = true; 
 		
 		for (int i = 0; i < arrayInteiros.length; i++) {
 			System.out.print("Digita algum numero na posicao array[" + i + "] : ");

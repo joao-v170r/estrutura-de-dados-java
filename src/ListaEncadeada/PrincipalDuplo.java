@@ -55,6 +55,8 @@ public class PrincipalDuplo {
 		
 		numero = input.nextInt();
 		
+		input.close();
+		
 		ponteiro = cabeca;
 		
 		if(ponteiro.getNumero() == numero) {

@@ -32,6 +32,7 @@ public class BuscaLinear {
 		System.out.print("Digita um dado de coleta");
 		procura = leitorTeclado.nextInt();
 		
+		leitorTeclado.close();
 		// Processamento
 		
 		achei = procurarVetor(vetor, procura);

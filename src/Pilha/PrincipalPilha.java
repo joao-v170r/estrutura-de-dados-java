@@ -1,24 +1,28 @@
-package Fila;
+package Pilha;
 
 import java.util.Scanner;
 
-public class Principal {
+
+public class PrincipalPilha {
 	public static void main(String[] args) {
 		//Declaração de variaveis
 		
 		
-		Fila objFila = new Fila();
+		Pilha pilha = new Pilha();
+		
 		Scanner leitorTeclado = new Scanner(System.in);
 		int opcao = 0;
+		
 		int resposta = 0;
 		
-		while (opcao != 5) {
+		while (opcao != 4) {
 			System.out.println("+=======menu=================+");
 			System.out.println("+ 1 - Inserir                +");
 			System.out.println("+ 2 - Remover                +");
-			System.out.println("+ 3 - Listar                 +");
-			System.out.println("+ 4 - Qual tamanho da fila?  +");
-			System.out.println("+ 5 - Sair                   +");
+			System.out.println("+ 3 - Ultimo elemento        +");
+			System.out.println("+ 4 - Sair                   +");
+			System.out.println("+ 5 - Explodir               +");
+			System.out.println("+ 6 - Listar Pilha           +");
 			System.out.println("+============================+");
 			
 			opcao = leitorTeclado.nextInt();
@@ -30,26 +34,32 @@ public class Principal {
 						resposta = leitorTeclado.nextInt();
 						
 						if (resposta != -1) {
-							objFila.insereElemento(resposta);
+							pilha.push(resposta);
 						}
 					}
 						
 					break;
 				case 2:
-					objFila.remover();
+					pilha.pop();
 					break;
 				case 3:
-					objFila.listar();
+					pilha.top();
 					break;
-				case 4:
-					System.out.println("Existem " + objFila.getQntNo() + " na fila!");
+				case 6:
+					pilha.exibiPilha();
 					break;
+				case 5:
+					while(true) {
+						pilha.push(10);
+						pilha.top();
+					}
+					
 			}
 			
 			
 		}
 		
 		leitorTeclado.close();
-		
 	}
+		
 }

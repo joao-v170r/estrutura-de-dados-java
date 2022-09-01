@@ -27,6 +27,6 @@ public class PreenchimentoInvertido {
 		 for (int valor : arrayInvertido) {
 			 System.out.println("rotev od " + valor + "  oãcisop ad rolav o etigid !"); 
 		 }
-		 System.out.println("Segundo codigo"); 
+		 System.out.println("Segundo codigo");  
 	 }
 }
